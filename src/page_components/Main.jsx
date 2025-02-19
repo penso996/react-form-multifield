@@ -1,7 +1,8 @@
 // Main.jsx
-
 import { useState } from "react";
 
+
+// Initial posts array
 const initialBlogPosts = [
     {
         id: 1,
@@ -39,6 +40,16 @@ const initialBlogPosts = [
         category: "Crescita Personale"
     }
 ];
+
+// Initial empty form
+const initialFormData = {
+    title: "",
+    author: "",
+    content: "",
+    category: 0,
+    available: false,
+};
+
 
 export default function Main() {
 
