@@ -78,8 +78,8 @@ export default function Main() {
         // generate a new unique ID
         const newId = posts.length === 0 ? 1 : posts[posts.length - 1].id + 1;
         // add new post to the list
-        setPosts((prevPosts) => [
-            ...prevPosts,
+        setPosts((currentPosts) => [
+            ...currentPosts,
             {
                 id: newId,
                 ...newPost
