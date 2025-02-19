@@ -21,4 +21,12 @@ header h1 {
 /* MAIN (Main.jsx) */
 main {
   padding: 20px;
+  width: 60%;
+}
+
+main div {
+  border: solid 1px lightgray;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px;
 }

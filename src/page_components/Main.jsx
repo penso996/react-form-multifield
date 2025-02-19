@@ -52,20 +52,18 @@ export default function Main() {
 
             {/* post form */}
             <div>
-
+                <h2>ok</h2>
             </div>
 
             {/* post container */}
-            <div>
-                {posts.map((post) => (
-                    <div className="post-container" key={post.id}>
-                        <h3>{post.title}</h3>
-                        <h4>{post.author}</h4>
-                        <p>{post.content}</p>
-                        <h6>{post.category}</h6>
-                    </div>
-                ))}
-            </div>
+            {posts.map((post) => (
+                <div key={post.id}>
+                    <h3>{post.title}</h3>
+                    <h5>{post.author}</h5>
+                    <p>{post.content}</p>
+                    <h6>{post.category}</h6>
+                </div>
+            ))}
 
         </main>
     );
