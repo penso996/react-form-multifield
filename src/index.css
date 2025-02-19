@@ -30,3 +30,13 @@ main div {
   border-radius: 5px;
   padding: 5px;
 }
+
+button {
+  margin-top: 15px;
+  background-color: rgba(13, 110, 253, 255);
+  border: solid 1px lightgray;
+  color: white;
+  padding: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+}
