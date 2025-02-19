@@ -72,6 +72,24 @@ export default function Main() {
         ));
     }
 
+    // FUNCTION to handle form submission
+    function handleSubmit(e) {
+        e.preventDefault(); // Prevent reload
+        // generate a new unique ID
+        const newId = posts.length === 0 ? 1 : posts[posts.length - 1].id + 1;
+        // add new post to the list
+        setPosts((prevPosts) => [
+            ...prevPosts,
+            {
+                id: newId,
+                ...newPost
+            }
+        ]);
+
+        // reset form fields
+        setNewPost(initialPostData);
+    }
+
     // RETURN
     return (
         <main>
@@ -80,7 +98,7 @@ export default function Main() {
             <div>
                 <h3>Inserisci un nuovo articolo</h3>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     {/* form for blog post title */}
                     <input type="text"
                         name="title"
@@ -119,7 +137,7 @@ export default function Main() {
             {posts.length === 0 ? (<div><h3>No posts to show</h3></div>) : (
                 posts.map((post) => (
                     <div key={post.id}>
-                        <h3>{post.title}</h3>
+                        <h3>{post.title} {post.id}</h3>
                         <h5>{post.author}</h5>
                         <p>{post.content}</p>
                         <h6>{post.category}</h6>
