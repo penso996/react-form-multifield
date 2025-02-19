@@ -68,11 +68,12 @@ export default function Main() {
     const [newPost, setNewPost] = useState(initialPostData);
     // FUNCTION to handle form data
     function handleFormData(e) {
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
         // use setFormData with form input
         setNewPost((currentFormData) => (
             {
                 ...currentFormData,
-                [e.target.name]: e.target.value,
+                [e.target.name]: value,
             }
         ));
     }
