@@ -56,14 +56,16 @@ export default function Main() {
             </div>
 
             {/* post container */}
-            {posts.map((post) => (
-                <div key={post.id}>
-                    <h3>{post.title}</h3>
-                    <h5>{post.author}</h5>
-                    <p>{post.content}</p>
-                    <h6>{post.category}</h6>
-                </div>
-            ))}
+            {posts.length === 0 ? (<h3>No posts to show</h3>) : (
+                posts.map((post) => (
+                    <div key={post.id}>
+                        <h3>{post.title}</h3>
+                        <h5>{post.author}</h5>
+                        <p>{post.content}</p>
+                        <h6>{post.category}</h6>
+                    </div>
+                ))
+            )}
 
         </main>
     );
