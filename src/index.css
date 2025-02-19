@@ -19,3 +19,6 @@ header h1 {
 }
 
 /* MAIN (Main.jsx) */
+main {
+  padding: 20px;
+}
