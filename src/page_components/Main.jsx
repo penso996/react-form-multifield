@@ -46,7 +46,6 @@ const initialFormData = {
     author: "",
     content: "",
     category: "",
-    available: false,
 };
 
 
@@ -64,13 +63,11 @@ export default function Main() {
     const [formData, setFormData] = useState(initialFormData);
     // FUNCTION to handle form data
     function handleFormData(e) {
-        // handle checkbox or input value
-        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
         // use setFormData with form input
         setFormData((currentFormData) => (
             {
                 ...currentFormData,
-                [e.target.name]: value,
+                [e.target.name]: e.target.value,
             }));
     }
 
@@ -110,14 +107,6 @@ export default function Main() {
                         onChange={handleFormData}
                         value={formData.category}
                         placeholder="Category"
-                    />
-                    {/* checkbox for availability */}
-                    <label htmlFor="available">Disponibile</label>
-                    <input type="checkbox"
-                        name="available"
-                        checked={formData.available}
-                        onChange={handleFormData}
-                        id="available"
                     />
                     <button>Send</button>
 
