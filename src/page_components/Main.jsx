@@ -127,8 +127,8 @@ export default function Main() {
                         value={newPost.category}
                         placeholder="Category"
                     />
-                    <button>Send</button>
 
+                    <button>Send</button>
                 </form>
 
             </div>
