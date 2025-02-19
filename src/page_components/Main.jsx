@@ -1,7 +1,6 @@
 // Main.jsx
 import { useState } from "react";
 
-
 // Initial posts array
 const initialBlogPosts = [
     {
@@ -85,32 +84,28 @@ export default function Main() {
 
                 <form>
                     {/* form for blog post title */}
-                    <input
-                        type="text"
+                    <input type="text"
                         name="title"
                         onChange={handleFormData}
                         value={formData.title}
                         placeholder="Title"
                     />
                     {/* form for blog post author */}
-                    <input
-                        type="text"
+                    <input type="text"
                         name="author"
                         onChange={handleFormData}
                         value={formData.author}
                         placeholder="Author"
                     />
                     {/* form for blog post content */}
-                    <input
-                        type="text"
+                    <input type="text"
                         name="content"
                         onChange={handleFormData}
                         value={formData.content}
                         placeholder="Content"
                     />
                     {/* form for blog post category */}
-                    <input
-                        type="text"
+                    <input type="text"
                         name="category"
                         onChange={handleFormData}
                         value={formData.category}
@@ -118,13 +113,13 @@ export default function Main() {
                     />
                     {/* checkbox for availability */}
                     <label htmlFor="available">Disponibile</label>
-                    <input
-                        type="checkbox"
+                    <input type="checkbox"
                         name="available"
                         checked={formData.available}
                         onChange={handleFormData}
                         id="available"
                     />
+                    <button>Send</button>
 
                 </form>
 

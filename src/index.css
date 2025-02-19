@@ -36,11 +36,17 @@ button {
   background-color: rgba(13, 110, 253, 255);
   border: solid 1px lightgray;
   color: white;
-  padding: 3px;
+  padding: 4px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 input {
   margin-right: 5px;
+}
+
+label {
+  font-size: 13px;
+  color: gray;
+  margin-right: 3px;
 }
