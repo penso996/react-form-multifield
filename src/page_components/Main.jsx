@@ -137,7 +137,7 @@ export default function Main() {
             {posts.length === 0 ? (<div><h3>No posts to show</h3></div>) : (
                 posts.map((post) => (
                     <div key={post.id}>
-                        <h3>{post.title} {post.id}</h3>
+                        <h3>{post.title}</h3>
                         <h5>{post.author}</h5>
                         <p>{post.content}</p>
                         <h6>{post.category}</h6>
