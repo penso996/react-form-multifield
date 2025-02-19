@@ -84,7 +84,7 @@ export default function Main() {
                 <h3>Inserisci un nuovo articolo</h3>
 
                 <form>
-                    {/* form for blog title */}
+                    {/* form for blog post title */}
                     <input
                         type="text"
                         name="title"
@@ -92,7 +92,7 @@ export default function Main() {
                         value={formData.title}
                         placeholder="Title"
                     />
-                    {/* form for blog author */}
+                    {/* form for blog post author */}
                     <input
                         type="text"
                         name="author"
@@ -100,7 +100,7 @@ export default function Main() {
                         value={formData.author}
                         placeholder="Author"
                     />
-                    {/* form for blog content */}
+                    {/* form for blog post content */}
                     <input
                         type="text"
                         name="content"
@@ -108,7 +108,7 @@ export default function Main() {
                         value={formData.content}
                         placeholder="Content"
                     />
-                    {/* form for blog category */}
+                    {/* form for blog post category */}
                     <input
                         type="text"
                         name="category"
