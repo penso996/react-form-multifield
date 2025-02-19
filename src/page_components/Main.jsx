@@ -45,7 +45,7 @@ export default function Main() {
     // useState to handle blogPosts
     const [posts, setPosts] = useState(blogPosts);
 
-    // FUNCTION to remove a post from ID
+    // FUNCTION to remove a post from ID (utilized for the button)
     function removePost(id) {
         const updatedBlogPost = posts.filter(post => post.id !== id);
         setPosts(updatedBlogPost);
@@ -58,7 +58,7 @@ export default function Main() {
 
             {/* post form */}
             <div>
-                <h2>ok</h2>
+                <h3>ok</h3>
             </div>
 
             {/* post container */}
