@@ -44,3 +44,9 @@ button {
 input {
   margin-right: 5px;
 }
+
+label {
+  font-size: 13px;
+  color: gray;
+  margin-right: 5px;
+}

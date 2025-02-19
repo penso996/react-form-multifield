@@ -51,6 +51,7 @@ const initialPostData = {
     author: "",
     content: "",
     category: "",
+    availability: false
 };
 
 
@@ -132,6 +133,14 @@ export default function Main() {
                         onChange={handleFormData}
                         value={newPost.category}
                         placeholder="Category"
+                    />
+                    {/* checkbox for availability */}
+                    <label htmlFor="availability">Disponibile</label>
+                    <input type="checkbox"
+                        name="availability"
+                        checked={newPost.availability}
+                        onChange={handleFormData}
+                        id="availability"
                     />
 
                     <button>Send</button>
