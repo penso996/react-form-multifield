@@ -46,7 +46,7 @@ const initialFormData = {
     title: "",
     author: "",
     content: "",
-    category: 0,
+    category: "",
     available: false,
 };
 
@@ -55,13 +55,25 @@ export default function Main() {
 
     // useState to handle blogPosts
     const [posts, setPosts] = useState(initialBlogPosts);
-
     // FUNCTION to remove a post from ID (utilized for the button)
     function removePost(id) {
         const updatedBlogPost = posts.filter(post => post.id !== id);
         setPosts(updatedBlogPost);
     }
 
+    // useState to handle form
+    const [formData, setFormData] = useState(initialFormData);
+    // FUNCTION to handle form data
+    function handleFormData(e) {
+        // handle checkbox or input value
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+        // use setFormData with form input
+        setFormData((currentFormData) => (
+            {
+                ...currentFormData,
+                [e.target.name]: value,
+            }));
+    }
 
     // RETURN
     return (
@@ -70,6 +82,52 @@ export default function Main() {
             {/* post form */}
             <div>
                 <h3>Inserisci un nuovo articolo</h3>
+
+                <form>
+                    {/* form for blog title */}
+                    <input
+                        type="text"
+                        name="title"
+                        onChange={handleFormData}
+                        value={formData.title}
+                        placeholder="Title"
+                    />
+                    {/* form for blog author */}
+                    <input
+                        type="text"
+                        name="author"
+                        onChange={handleFormData}
+                        value={formData.author}
+                        placeholder="Author"
+                    />
+                    {/* form for blog content */}
+                    <input
+                        type="text"
+                        name="content"
+                        onChange={handleFormData}
+                        value={formData.content}
+                        placeholder="Content"
+                    />
+                    {/* form for blog category */}
+                    <input
+                        type="text"
+                        name="category"
+                        onChange={handleFormData}
+                        value={formData.category}
+                        placeholder="Category"
+                    />
+                    {/* checkbox for availability */}
+                    <label htmlFor="available">Disponibile</label>
+                    <input
+                        type="checkbox"
+                        name="available"
+                        checked={formData.available}
+                        onChange={handleFormData}
+                        id="available"
+                    />
+
+                </form>
+
             </div>
 
             {/* post container */}
