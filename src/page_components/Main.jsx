@@ -41,7 +41,7 @@ const initialBlogPosts = [
 ];
 
 // Initial empty form
-const initialFormData = {
+const initialPostData = {
     title: "",
     author: "",
     content: "",
@@ -60,7 +60,7 @@ export default function Main() {
     }
 
     // useState to handle form
-    const [formData, setFormData] = useState(initialFormData);
+    const [newPost, setNewPost] = useState(initialPostData);
     // FUNCTION to handle form data
     function handleFormData(e) {
         // use setFormData with form input
@@ -84,28 +84,28 @@ export default function Main() {
                     <input type="text"
                         name="title"
                         onChange={handleFormData}
-                        value={formData.title}
+                        value={newPost.title}
                         placeholder="Title"
                     />
                     {/* form for blog post author */}
                     <input type="text"
                         name="author"
                         onChange={handleFormData}
-                        value={formData.author}
+                        value={newPost.author}
                         placeholder="Author"
                     />
                     {/* form for blog post content */}
                     <input type="text"
                         name="content"
                         onChange={handleFormData}
-                        value={formData.content}
+                        value={newPost.content}
                         placeholder="Content"
                     />
                     {/* form for blog post category */}
                     <input type="text"
                         name="category"
                         onChange={handleFormData}
-                        value={formData.category}
+                        value={newPost.category}
                         placeholder="Category"
                     />
                     <button>Send</button>
