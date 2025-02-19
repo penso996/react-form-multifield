@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const blogPosts = [
+const initialBlogPosts = [
     {
         id: 1,
         title: "Introduzione a JavaScript",
@@ -43,7 +43,7 @@ const blogPosts = [
 export default function Main() {
 
     // useState to handle blogPosts
-    const [posts, setPosts] = useState(blogPosts);
+    const [posts, setPosts] = useState(initialBlogPosts);
 
     // FUNCTION to remove a post from ID (utilized for the button)
     function removePost(id) {
@@ -58,7 +58,7 @@ export default function Main() {
 
             {/* post form */}
             <div>
-                <h3>ok</h3>
+                <h3>Inserisci un nuovo articolo</h3>
             </div>
 
             {/* post container */}
