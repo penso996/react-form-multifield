@@ -64,11 +64,12 @@ export default function Main() {
     // FUNCTION to handle form data
     function handleFormData(e) {
         // use setFormData with form input
-        setFormData((currentFormData) => (
+        setNewPost((currentFormData) => (
             {
                 ...currentFormData,
                 [e.target.name]: e.target.value,
-            }));
+            }
+        ));
     }
 
     // RETURN
