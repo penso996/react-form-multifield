@@ -8,35 +8,40 @@ const initialBlogPosts = [
         title: "Introduzione a JavaScript",
         author: "Mario Rossi",
         content: "JavaScript è un linguaggio di programmazione utilizzato per creare interattività nei siti web.",
-        category: "Programmazione"
+        category: "Programmazione",
+        availability: true
     },
     {
         id: 2,
         title: "I benefici della meditazione",
         author: "Laura Bianchi",
         content: "La meditazione aiuta a ridurre lo stress e migliorare la concentrazione.",
-        category: "Benessere"
+        category: "Benessere",
+        availability: true
     },
     {
         id: 3,
         title: "Viaggiare in Giappone: cosa sapere",
         author: "Giovanni Verdi",
         content: "Il Giappone offre un mix unico di tradizione e modernità. Ecco alcuni consigli per il tuo viaggio.",
-        category: "Viaggi"
+        category: "Viaggi",
+        availability: false
     },
     {
         id: 4,
         title: "Guida all'alimentazione sana",
         author: "Chiara Neri",
         content: "Una dieta equilibrata è essenziale per mantenere la salute e il benessere.",
-        category: "Salute"
+        category: "Salute",
+        availability: true
     },
     {
         id: 5,
         title: "Come migliorare la produttività",
         author: "Stefano Gialli",
         content: "Organizzare il tempo e ridurre le distrazioni può aumentare significativamente la produttività.",
-        category: "Crescita Personale"
+        category: "Crescita Personale",
+        availability: false
     }
 ];
 
@@ -141,6 +146,7 @@ export default function Main() {
                         <h5>{post.author}</h5>
                         <p>{post.content}</p>
                         <h6>{post.category}</h6>
+                        <p>{post.availability === true ? "DISPONIBILE" : "NON DISPONIBILE"}</p>
                         <button onClick={() => removePost(post.id)}>Delete</button>
                     </div>
                 ))
