@@ -59,14 +59,15 @@ export default function Main() {
 
     // useState to handle blogPosts
     const [posts, setPosts] = useState(initialBlogPosts);
+    // useState to handle form
+    const [newPost, setNewPost] = useState(initialPostData);
+
     // FUNCTION to remove a post from ID (utilized for the button)
     function removePost(id) {
         const updatedBlogPost = posts.filter(post => post.id !== id);
         setPosts(updatedBlogPost);
     }
 
-    // useState to handle form
-    const [newPost, setNewPost] = useState(initialPostData);
     // FUNCTION to handle form data
     function handleFormData(e) {
         const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
